@@ -135,6 +135,14 @@ API location (for this assignment):
 
 https://assgn2tag-isd4ai77qq-oa.a.run.app/
 
+## 3. Dependencies!
+    
+## Torch: 
+We used torch as a dependency for transformers
+
+## Transformers: 
+We used this dependency for answering question.
+
 
 ## 4. How to build and run the API locally via Docker or Flask
 ### Steps:
