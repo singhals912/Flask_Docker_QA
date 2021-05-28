@@ -4,7 +4,7 @@
 ### There are 2 routes in the Flask App:
 #### /models -> 3 methods have been used under this route: 
   #### 1. GET: To get the list of all the models. 
-              e.g.: https://assgn2tag-isd4ai77qq-oa.a.run.app//models 
+              e.g.: https://assignment2-isd4ai77qq-uc.a.run.app/models 
               This will give the list of all the models as the response.
               Response:
               [
@@ -22,7 +22,7 @@
 
 
   #### 2. PUT: To add a model in our list of models. 
-              e.g.: https://assgn2tag-isd4ai77qq-oa.a.run.app//models 
+              e.g.:https://assignment2-isd4ai77qq-uc.a.run.app/models 
               This will give the list of all the models in addition to the model we have requested to added in our list of models.
 
               Request:
@@ -52,7 +52,7 @@
                 }
               ]
   #### 3. DELETE: To delete a model in our list of models. 
-                e.g.: https://assgn2tag-isd4ai77qq-oa.a.run.app/models?model=bert-tiny
+                e.g.: https://assignment2-isd4ai77qq-uc.a.run.app/models?model=bert-tiny
                 This will give the list of all the models after the deletion of the model we have requested to be removed in the URL, “bert-tiny” in this case, in our list of models.
 
                 Response:
@@ -73,7 +73,7 @@
 #### /answer -> 2 methods have been used under this route: 
 #### 1. ANSWERING A QUESTION
 ####  POST: To add a question and a context for it in our table, and then get an answer to the question from the context. It also gives the model that is used in order to give us the answer and timestamp in terms of the Unix time.
-e.g. https://assgn2tag-isd4ai77qq-oa.a.run.app/answer
+e.g. https://assignment2-isd4ai77qq-uc.a.run.app/answer
 
         Request:
 
@@ -99,7 +99,7 @@ e.g. https://assgn2tag-isd4ai77qq-oa.a.run.app/answer
 
 #### 2. LIST OF RECENTLY ANWERED QUESTIONS
 #### GET: We use this when we want to know the questions which were answered with its context between a timeframe (Unix format). We require to give a start and end time in order to get results.
-e.g:  https://assgn2tag-isd4ai77qq-oa.a.run.app/answer?start=1622160500.3238049&end=1722001920.9152892
+e.g:  https://assignment2-isd4ai77qq-uc.a.run.app/answer?start=1622160500.3238049&end=1722001920.9152892
 
         Response:
 
@@ -133,7 +133,7 @@ The API in this assignment has been used to get various serialized AI models to 
 
 API location (for this assignment):
 
-https://assgn2tag-isd4ai77qq-oa.a.run.app/
+https://assignment2-isd4ai77qq-uc.a.run.app
 
 ## 3. Dependencies!
     
