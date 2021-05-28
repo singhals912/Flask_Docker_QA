@@ -137,10 +137,10 @@ https://assgn2tag-isd4ai77qq-oa.a.run.app/
 
 ## 3. Dependencies!
     
-## Torch: 
+### Torch: 
 We used torch as a dependency for transformers
 
-## Transformers: 
+### Transformers: 
 We used this dependency for answering question.
 
 
