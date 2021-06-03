@@ -9,10 +9,37 @@ import os
 import psycopg2
 
 # Format DB connection information
+sslrootcert_var = os.environ.get('PG_SSLROOTCERT')
+sslrootcert_var = sslrootcert_var.replace('@', '=')
+file = open("/server-ca.pem", "w")
+file.write(sslrootcert_var)
+file.close()
+os.chmod("/server-ca.pem", stat.S_IRUSR)
+os.chmod("/server-ca.pem", stat.S_IWUSR)
+sslrootcert = "sslrootcert=/server-ca.pem"
+
+# Format DB connection information
+sslcert_var = os.environ.get('PG_SSLCERT')
+sslcert_var = sslcert_var.replace('@', '=')
+file = open("/server-ca.pem", "w")
+file.write(sslcert_var)
+file.close()
+os.chmod("/client-cert.pem", stat.S_IRUSR)
+os.chmod("/client-cert.pem", stat.S_IWUSR)
+sslcert = "sslcert=/client-cert.pem"
+
+
+# Format DB connection information
+sslkey_var = os.environ.get('PG_SSLKEY')
+sslkey_var = sslkey_var.replace('@', '=')
+file = open("/client-key.pem", "w")
+file.write(sslkey_var)
+file.close()
+os.chmod("/client-key.pem", stat.S_IRUSR)
+os.chmod("/client-key.pem", stat.S_IWUSR)
+sslkey = "sslkey=/client-key.pem"
+
 sslmode = "sslmode=verify-ca"
-sslrootcert = "sslrootcert={}".format(os.environ.get('PG_SSLROOTCERT'))
-sslcert = "sslcert={}".format(os.environ.get('PG_SSLCERT'))
-sslkey = "sslkey={}".format(os.environ.get('PG_SSLKEY'))
 hostaddr = "hostaddr={}".format(os.environ.get('PG_HOST'))
 user = "user=postgres"
 password = "password={}".format(os.environ.get('PG_PASSWORD'))
