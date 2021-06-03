@@ -21,7 +21,7 @@ sslrootcert = "sslrootcert=/server-ca.pem"
 # Format DB connection information
 sslcert_var = os.environ.get('PG_SSLCERT')
 sslcert_var = sslcert_var.replace('@', '=')
-file = open("/server-ca.pem", "w")
+file = open("/client-cert.pem", "w")
 file.write(sslcert_var)
 file.close()
 os.chmod("/client-cert.pem", stat.S_IRUSR)
