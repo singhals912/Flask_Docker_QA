@@ -324,5 +324,5 @@ if __name__ == '__main__':
     con.close()
 
     # Run our Flask app and start listening for requests!
-    app.run(host='0.0.0.0', port=8000, threaded=True)
-    #app.run(host='0.0.0.0', port=int(os.environ.get("PORT", 8080)), threaded=True)
+    #app.run(host='0.0.0.0', port=8000, threaded=True)
+    app.run(host='0.0.0.0', port=int(os.environ.get("PORT", 8080)), threaded=True)
