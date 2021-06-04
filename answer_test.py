@@ -1,5 +1,5 @@
 import pytest
-from restapi_final import create_app
+from app import create_app
 import time
 import sqlite3
 timestamp = int(time.time())
