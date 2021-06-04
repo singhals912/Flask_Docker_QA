@@ -44,3 +44,7 @@ jobs:
 
     - name: Show Output
       run: echo ${{ steps.deploy.outputs.url }}
+      
+    - name: Test Container
+      run: |-
+        docker run -w /app gcr.io/${{ env.PROJECT_ID }}/${{ env.SERVICE }}:${{  github.sha }} pytest -v
