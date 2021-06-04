@@ -1,4 +1,4 @@
-# Assginment2 Documentation
+# Assginment 2 Documentation
 
 ## 1. A listing of available routes/resources along with example requests and responses
 ### There are 2 routes in the Flask App:
