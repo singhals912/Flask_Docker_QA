@@ -1,6 +1,6 @@
 FROM python:3.8-slim
 
-RUN pip install Flask pandas transformers torch flask_sqlalchemy psycopg2-binary
+RUN pip install Flask pandas transformers torch flask_sqlalchemy psycopg2-binary pytest
 
 COPY app.py /app/app.py
 
