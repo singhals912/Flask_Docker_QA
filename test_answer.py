@@ -1,7 +1,8 @@
 import pytest
-from app import create_app
+from Assignment2 import create_app
 import time
 import sqlite3
+
 timestamp = int(time.time())
 
 @pytest.fixture
@@ -15,7 +16,6 @@ def test_health(client):
     r = client.get("/")
     assert 200 == r.status_code
 
-
 def test_addModel(client):
     print("Testing Add Model functionality")
     # Test add a model functionality
@@ -26,6 +26,7 @@ def test_addModel(client):
     }
     r = client.put("/models", json=payload)
     assert 200 == r.status_code
+
 
 def test_getModel(client):
     # test /models GET
