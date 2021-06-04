@@ -290,7 +290,7 @@ if __name__ == '__main__':
     # Database setup
     con = psycopg2.connect(db_connect_string)
     cur = con.cursor()
-    cur.execute('''CREATE TABLE answers
+    cur.execute('''CREATE TABLE IF NOT EXISTS answers
                (question text, context text, model text, answer text, timestamp int)''')
     con.commit()
     con.close()
