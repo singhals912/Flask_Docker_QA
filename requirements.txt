@@ -3,7 +3,7 @@ flask
 Torch
 psycopg2-binary
 pytest==6.2.2
-
+pytest
 
 
 
