@@ -14,7 +14,7 @@ if not os.path.exists('.ssl'):
 filecontents = os.environ.get('GCS_CREDS')
 decoded_creds = base64.b64decode(filecontents)
 with open('/app/creds.json', 'w') as f:
-    f.write(decoded_creds)
+    f.write(str(decoded_creds))
 os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = '/app/creds.json'
 
 filecontents = os.environ.get('PG_SSLROOTCERT')
