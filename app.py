@@ -68,7 +68,7 @@ def create_app():
         client = storage.Client()
 
         # Retrieving the bucket
-        bucket = client.get_bucket('mgmt-590-class')ass
+        bucket = client.get_bucket('mgmt-590-class')
 
         # Push our file to the bucket
         try:
