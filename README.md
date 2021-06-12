@@ -1,6 +1,6 @@
 # Assginment 2 Documentation
 
-## 1. A listing of available routes/resources along with example requests and responses
+## 1. A listing of available routes/resources along with example requests and response
 ### There are 2 routes in the Flask App:
 #### /models -> 3 methods have been used under this route: 
   #### 1. GET: To get the list of all the models. 
